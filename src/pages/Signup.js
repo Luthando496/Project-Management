@@ -52,6 +52,7 @@ const Signup = () => {
         // <Redirect 
         navigate('/')
       }
+       console.log(user)
   
     },[user])
 

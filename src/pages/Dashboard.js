@@ -18,6 +18,7 @@ const Dashboard = () => {
     }
 
     dispatch(getCollections())
+    console.log(user)
 
   },[user])
   return (

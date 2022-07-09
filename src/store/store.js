@@ -1,14 +1,17 @@
 import {createSlice,configureStore} from '@reduxjs/toolkit'
 
 
+const user = localStorage.getItem('user') ?JSON.parse((localStorage.getItem('user'))) : null
+
+
 const authSlice = createSlice({
     name:'auth',
-    initialState:{user:null,loggedIn:false,err:null,proError:null,pending:false,users:null,projects:null,loadProject:false,singlePro:null,singleError:null,singleFetch:false},
+    initialState:{user:user,loggedIn:user? true:false,err:null,proError:null,pending:false,users:null,projects:null,loadProject:false,singlePro:null,singleError:null,singleFetch:false},
     reducers:{
 
         login(state,action){
             state.user = action.payload;
-            state.loggedIn = true;
+            state.loggedIn = true
             state.err = null
         },
         PendingTrue(state){

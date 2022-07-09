@@ -39,6 +39,8 @@ export const register =(displayName,email,password,file)=>{
             online:true,
             imageUrl
            })
+
+           JSON.stringify(localStorage.setItem('user',{user:user.user.providerData[0],uid:user.user.uid}))
            
            dispatch(authSliceAction.login({user:user.user.providerData[0],uid:user.user.uid}))
            dispatch(authSliceAction.PendingFalse())
@@ -100,6 +102,9 @@ export const loginUser =(email,password)=>{
             await updateDoc(userCollection,{
                 online:true,
             });
+
+           localStorage.setItem('user',JSON.stringify({user:user.user.providerData[0],uid:user.user.uid}))
+
 
             dispatch(authSliceAction.login({user:user.user.providerData[0],uid:user.user.uid}))
             dispatch(authSliceAction.PendingFalse())

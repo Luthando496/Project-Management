@@ -68,6 +68,7 @@ const Create = () => {
     if(!loggedIn && !user){
       navigate('/login')
     }
+    console.log(user)
 
   },[user])
 

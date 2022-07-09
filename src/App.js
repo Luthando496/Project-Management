@@ -29,14 +29,14 @@ function App() {
       <div className="container">
         <Navbar />
           <Routes>
-              <Route path='/' element={<PrivateRoutes/>}>
+              {/* <Route path='/' element={<PrivateRoutes/>}> */}
                   <Route exact path="/" element={<Dashboard />} />
                   <Route path="/create" element={<Create />} />
                   <Route path="/projects/:id" element={<Project/>} >
                   </Route>
                   <Route path="/login" element={<Login />} />
                   <Route path="/signup" element={<Signup />} />
-              </Route>
+              {/* </Route> */}
           </Routes>
       </div>
       {user && <OnlineUsers />}

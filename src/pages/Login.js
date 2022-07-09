@@ -28,10 +28,11 @@ const Login = () => {
       // <Redirect 
       navigate('/')
     }
+    console.log(localStorage.getItem('user'))
 
 
 
-  },[user])
+  },[user,loggedIn])
   return (
     <form className='auth-form' onSubmit={Submit}>
     {err && <span>{err}</span>}
