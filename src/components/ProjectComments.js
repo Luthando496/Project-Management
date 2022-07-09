@@ -35,6 +35,7 @@ const ProjectComments = () => {
 
                 </textarea>
             </label>
+            <button className='btn'>Add Comment</button>
         </form>
 
     </div>

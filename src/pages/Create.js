@@ -69,7 +69,7 @@ const Create = () => {
       navigate('/login')
     }
 
-  },[loggedIn])
+  },[user])
 
 
 

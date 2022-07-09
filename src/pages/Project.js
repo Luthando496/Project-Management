@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import { useParams } from 'react-router-dom'
+import ProjectComments from '../components/ProjectComments'
 import ProjectSummary from '../components/ProjectSummary'
 import {getSingleDocument} from '../store/Actions/auth'
 import './Project.css'
@@ -24,10 +25,11 @@ const Project = () => {
 
   useEffect(()=>{
     dispatch(getSingleDocument(id))
-  },[])
+  },[dispatch])
   return (
     <div className='project-details'>
       {project && <ProjectSummary project={project}/> }
+      {project && <ProjectComments/> }
     </div>
   )
 }

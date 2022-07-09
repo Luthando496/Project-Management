@@ -53,7 +53,7 @@ const Signup = () => {
         navigate('/')
       }
   
-    },[loggedIn])
+    },[user])
 
   return (
     <form className='auth-form' onSubmit={Submit}>

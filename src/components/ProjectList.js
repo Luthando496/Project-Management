@@ -12,13 +12,14 @@ const Projects = (projects) => {
           // <h1>{doc.name}</h1>
           <Link to={`/projects/${doc.id}`} key={doc.id}>
           <h4>{doc.name}</h4>
-          
+          <div className='project-list assigned-users'>
           <p>Due by{doc.dueDate.toDate().toDateString()}</p>
           {doc.assignedUserslist.map(user=>(
-                <div key={user.id}>
+            <div key={user.id}>
                     <Avatar src={user.photoURL} />
                 </div>
             ))}
+            </div>
 
           </Link>
       ))}

@@ -30,6 +30,10 @@
     display: flex;
     margin-top: 20px;
   }
+ .assigned-users {
+    display: flex;
+    margin-top: 20px;
+  }
   .project-summary .assigned-users .avatar {
     margin-right: 10px;
   }

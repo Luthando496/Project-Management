@@ -31,7 +31,7 @@ const Login = () => {
 
 
 
-  },[loggedIn,user])
+  },[user])
   return (
     <form className='auth-form' onSubmit={Submit}>
     {err && <span>{err}</span>}

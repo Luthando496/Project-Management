@@ -19,7 +19,7 @@ export default function OnlineUsers() {
 
         dispatch(getUsers())
 
-    },[])
+    },[dispatch])
 
 
   return (
